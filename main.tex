@@ -1,0 +1,233 @@
+% ====================================================================================
+% ESTE É O DOCUMENTO PRINCIPAL DO PROJETO
+%
+% - É este o arquivo que o LaTeX buscará compilar primeiro para gerar o documento final.
+% - O conteúdo aqui organizado definirá a estrutura geral do seu trabalho.
+% - As opções do documento (nome de autores, informações sobre o texto, etc.),
+%   serão definidas aqui
+% - É aqui que você escolherá quais elementos textuais incluir ou omitir da versão
+%   final do documento
+%
+% IMPORTANTE: não remover linhas com comandos essenciais, como 'begin{document}' e
+%             'end{document}' e evitar alterar as definições do documento anteriores
+%             às informações omplementares, a não ser que saiba bem o que está fazendo
+%             (permitido incluir pacotes conforme necessidade, mas checar se há
+%             incompatibilidade com as pré-definições do documento)
+%
+% Obs.: este modelo utiliza o pacote 'fontspec' para carregar as fontes 'Arial' e
+%       'Times New Roman'. Para que ele funcione, é necessário compilar o documento
+%       com XeLaTeX (recomendado) ou LuaLaTeX. No Overleaf, é possível trocar o
+%       compilador na aba 'Menu'.
+% ====================================================================================
+
+\documentclass[
+    12pt, % tamanho da fonte
+    openright, % numeração começa apenas na primeira página textual
+    oneside, % impressão apenas em anverso (para imprimir em anverso e reverso, opção: twoside)
+    a4paper, % formato da folha
+    %draft,                 % descomentar para compilação mais veloz (figuras e links internos não carregam)
+    chapter=TITLE, % títulos em maiúsculas
+    section=Title, % seções sem formatação adicional
+    subsection=Title, % subseções sem formatação adicional
+    subsubsection=Title, % (sub-)subseções sem formatação adicional
+    spanish, % suporte a idioma para hifenização
+    english, % suporte a idioma para hifenização
+    brazil % suporte a idioma para hifenização (último idioma declarado é o principal do documento)
+]{insper-abntex2}
+
+% ----
+% Importando pacotes
+% ----
+
+\usepackage{xcolor} % controle de cores
+\usepackage{graphicx} % inclusão de gráficos e imagens
+\usepackage{microtype} % melhorias de tipografia, espaçamento e justiificação
+\usepackage{caption} % legendas
+\usepackage{imakeidx} % criação de índices
+\makeindex % compilar índice
+\usepackage[
+    acronym, % configurações específicas para acrônimos
+    xindy={language=portuguese}, % para o índice remissivo
+    subentrycounter, % contagem de subentradas no glossário
+    seeautonumberlist, % ver também números automáticos na lista
+    nonumberlist=true % sem numeração das entradas no glossário
+]{glossaries} % gerenciamento de glossários
+\input{3-pos-textuais/glossario} % definições de glossário
+\makeglossaries % compilar glossário
+
+\usepackage{
+    fontspec
+} % uso de fontes TrueType (requer motor de compilação XeTeX ou LuaTeX)
+
+% Para bibliografia
+\usepackage{csquotes} % gerenciamento de citações
+\usepackage[
+    backend=biber, % backend de processamento do arquivo .bib
+    style=abnt, % estilo de citações e referências
+    sorting=nyt, % ordena as referências em nome, ano e título, respectivamente
+    extrayear, % diferencia os anos com letras na bibliografia
+    repeatfields, % imprime os campos repetidos na bibliografia
+]{biblatex}
+\renewcommand*{\mkbibnamegiven}[1]{#1} % prenome dado não é modificado
+\renewcommand*{\mkbibnamefamily}[1]{#1} % sobrenome dado não é modificado
+\DeclareFieldFormat{url}{Disponível em: \url{#1}} % exibição da URL nas referências
+
+% Pacotes para uso matemático (deletar e incluir pacotes aqui conforme necessidade)
+\usepackage{amsmath} % equações avançadas
+\usepackage{amssymb} % símbolos adicionais
+\usepackage{amsfonts} % fontes adicionais
+\usepackage{amsthm} % teoremas (criação e personalização)
+\usepackage{mathtools} % extensão de amsmath
+
+\usepackage{
+    lipsum
+} % geração de texto dummy (apenas para teste de formatação; permitido excluir)
+
+% ----
+% Configurações de aparência do PDF final
+% ----
+
+% informações do PDF (não editar)
+\makeatletter
+\hypersetup{%
+    %pagebackref=true,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+    pdfkeywords={abnt, latex, abntex, abntex2, trabalho acadêmico, Insper},
+    colorlinks=true,
+    linkcolor=black, % cor dos links internos
+    citecolor=black, % cor dos links das citações
+    filecolor=magenta, % cor dos links dos arquivos
+    urlcolor=gray, % cor dos links das URL's
+    bookmarksdepth=4
+}
+\makeatother
+
+% Configurações de espaçamento
+% Indentação dos parágrafos (não editar)
+\setlength{\parindent}{0pt}
+% Espaçamento entre linhas
+\setlength{\baselineskip}{12pt}
+% Espaçamento entre parágrafos
+\setlength{\parskip}{18pt}
+% Espaçamento entre referências
+\setlength{\bibitemsep}{18pt}
+
+% ----
+% Informações Complementares
+% ----
+
+% Edite conforme necessidade
+
+% Fonte (descomentar a fonte a ser utilizada)
+\setmainfont{Arial}
+%\setmainfont{Times New Roman}
+
+% Fontes bibliográficas
+\addbibresource{referencias.bib}
+
+% Título
+\titulo{Título do trabalho}
+% Subtítulo
+\subtitulo{Subtítulo se houver}
+% Autor (nome completo)
+\autor{Seu Nome Completo}
+% Ano com 4 dígitos
+\data{\the\year} % \the\year imprime o ano corrente
+% Nome da instituição
+\instituicao{Insper}
+% Nome do curso
+\curso{Nome Completo do Curso}
+% Localidade da apresentação do documento
+\local{São Paulo}
+% Orientador (nome completo)
+\orientador[Orientador:]{Nome do Seu Orientador}
+% Coorientador (nome completo)
+\coorientador[Coorientador:]{Nome do Seu Coorientador}
+% Tipo de trabalho (TCC  / Dissertação / Tese)
+\tipotrabalho{Tipo de trabalho}
+% Palavras-chaves (importante: separar por vírgulas)
+\palavraschaves{abnt, LaTeX, formatação, equações, microeconomia}
+% Palavras-chaves em inglês (importante: separar por vírgulas)
+\keywords{abnt, LaTeX, formatting, equations, microeconomics}
+% Professores convidados (importante: separar por vírgulas)
+\professores{Adam Smith, John Maynard Keynes, Robert Lucas Jr.}
+
+% Preâmbulo
+\preambulo{(TCC / Dissertação / Tese) apresentado ao Curso (Graduação em Economia / Graduação em Administração / Graduação em Direito / Graduação em Engenharia (Computação/Mecânica/Mecatrônica) / Graduação em Ciência de Dados / Mestrado em Administração / LLM / Doutorado) como requisito parcial para a obtenção do título de (Bacharel / Mestre / Especialista / Pós-graduado / Doutor) em área de estudo.}
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+    % Retira espaço extra obsoleto entre as frases
+    \frenchspacing
+
+    % Elementos pré-textuais
+    \pretextual
+    % Capa (obrigatório)
+    \imprimircapa
+    % Folha de rosto (obrigatório)
+    \imprimirfolhaderosto
+
+    % Ficha catalográfica (opcional)
+    \imprimirfichacatalografica
+    % Errata (opcional)
+    \input{1-pre-textuais/opcionais/errata}
+    % Folha de aprovação (obrigatório)
+    \imprimirfolhadeaprovacao
+    % Dedicatória (opcional)
+    \input{1-pre-textuais/opcionais/dedicatoria}
+    % Agradecimentos (opcional)
+    \input{1-pre-textuais/opcionais/agradecimentos}
+    % Epígrafe (opcional)
+    \input{1-pre-textuais/opcionais/epigrafe}
+    % Resumo (obrigatório)
+    \input{1-pre-textuais/resumo}
+    % Abstract - Resumo em língua estrangeira (obrigatório)
+    \input{1-pre-textuais/abstract}
+    % Lista de ilustrações (opcional)
+    \imprimirlistadeilustracoes
+    % Lista de tabelas (opcional)
+    \imprimirlistadetabelas
+    % Lista de abreviaturas e siglas (opcional)
+    \input{1-pre-textuais/opcionais/lista-de-abreviaturas-e-siglas}
+    % Lista de símbolos (opcional)
+    \input{1-pre-textuais/opcionais/lista-de-simbolos}
+    % Sumário (obrigatório)
+    \imprimirsumario
+
+    % Elementos textuais
+    \textual
+    % Capítulos do texto (incluir conforme necessidade)
+    \include{2-textuais/01-introducao}
+    \include{2-textuais/02-estrutura-basica}
+    \include{2-textuais/03-elementos-basicos}
+    \include{2-textuais/04-citacoes}
+    \include{2-textuais/05-teste-glossario}
+    \include{2-textuais/06-conclusão}
+
+    % Elementos pós-textuais
+    \postextual
+    % Bibliografia (obrigatório)
+    \printbibliography
+    [title=REFERÊNCIAS]
+    % Glossário (opcional)
+    \imprimirglossario
+    % Apêndices (opcional)
+    \begin{apendicesenv}
+        \partapendices
+        \input{3-pos-textuais/apendices/apendice-a}
+        \input{3-pos-textuais/apendices/apendice-b}
+    \end{apendicesenv}
+    % Anexos (opcional)
+    \begin{anexosenv}
+        \partanexos
+        \input{3-pos-textuais/anexos/01-anexo-a}
+        \input{3-pos-textuais/anexos/02-anexo-b}
+    \end{anexosenv}
+    % Índice remissivo (opcional)
+    \imprimirindice
+\end{document}

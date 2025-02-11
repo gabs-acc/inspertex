@@ -1,0 +1,76 @@
+\chapter{Elementos básicos}
+
+\section{Tabelas}\label{sec:tabelas}
+A tabela \ref{tab:exemplo} é um exemplo de tabela feita no \LaTeX. É indicado utilizar produzir tabelas em formato consistente com o \LaTeX, quando possível, em vez de colar como imagem, de modo a manter a coerência textuais.
+
+Note que foi criado um diretório próprio para armazenar as tabelas do documento, para facilitar o gerenciamento das tabelas no documento e deixar nosso ambiente de trabalho mais limpo. Em vez de deixar o comando completo no meio do texto, você pode armazenar sua tabela em um arquivo \texttt{.tex} separado e incluí-lo no documento a partir do comando \texttt{\textbackslash input}. O mesmo serve para quaisquer outros pedaços de texto ou elementos que você deseje armazenar separadamente do seu ambiente principal de edição.
+
+\input{tabelas/tabela-exemplo}
+
+Informações sobre o uso de tabelas no \LaTeX\ podem ser encontradas em \href{https://www.overleaf.com/learn/latex/Tables}{Tables (Overleaf)}.
+
+O Overleaf possui uma ferramenta de edição gráfica de tabelas no modo de edição visual. Outra ferramenta útil pode ser o \href{https://www.tablesgenerator.com/}{Tables Generator}.
+
+Se a tabela tiver sido gerada a partir de algum software específico, confira se já existe alguma ferramenta para exportar sua tabela automaticamente para formato \LaTeX. A título de exemplo, ver opções para a linguagem \href{https://stackoverflow.com/questions/5465314/tools-for-making-latex-tables-in-r}{R (Stack Overflow)}.
+
+\section{Expressões formais}
+A fórmula \ref{eqn:newton} é um exemplo de equação numerada.
+
+\begin{equation}
+(x + a)^n = \sum_{k=0}^n \binom{n}{k} x^k a^{n - k}
+\label{eqn:newton}
+\end{equation}
+
+A seguir, a demonstração do teorema de Bayes (equação \ref{eqn:bayes}).
+
+\begin{align}
+    P(A|B) &= \frac{P(A \cap B)}{P(B)}\\
+    &= \frac{P(A \cap B)}{P(B)} \cdot \frac{P(A)}{P(A)}\\
+    &= \frac{P(A \cap B)}{P(A)} \cdot \frac{P(A)}{P(B)}\\
+    &= \frac{P(B|A) \cdot P(A)}{P(B)}\label{eqn:bayes}
+\end{align}
+
+Mais informações relevantes em \href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{Mathematical expressions (Overleaf)}.
+
+Para construir as fórmulas em formato compatível com \LaTeX, pode ser útil a ferramenta \href{https://editor.codecogs.com/}{CodeCogs}.
+
+Para descobrir os comandos para os símbolos que precisar utilizar, basta desenhar o símbolo em \href{https://detexify.kirelabs.org/classify.html}{Detexify}, que te retornará o comando e pacote requerido (importar pacote no preâmbulo do \texttt{main.tex} caso não esteja importado).
+
+\section{Citações}
+
+\subsection{Citação direta curta}
+
+A citação no fluxo do texto é feita com o comando \texttt{\textbackslash textcite} e a citação isolada é feita com o comando \texttt{\textbackslash cite}.
+
+Exemplo no texto (com \texttt{\textbackslash textcite}):
+
+Conforme \textcite[8]{churchill2012marketing}, “embora a orientação para a produção seja muito criticada por vários profissionais de marketing, há situações em que ela é apropriada.”
+
+Exemplo no texto (com \texttt{\textbackslash cite}):
+
+“Embora a orientação para a produção seja muito criticada por vários profissionais de marketing, há situações em que ela é apropriada.” \cite[8]{churchill2012marketing}
+
+\section{Imagens}
+A figura \ref{fig:telles} apresenta um exemplo simples de como importar uma imagem.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=.5\textwidth]{figuras/telles.pdf}
+    \caption{Biblioteca Telles}
+    \label{fig:telles}
+\end{figure}
+
+O \LaTeX\ possui especificações próprias para escolher onde a imagem se localizará, mas é possível escolher preferências particulares para a formatação.
+
+No nosso exemplo, usamos a opção \texttt{[hbt!]}, que define:
+
+\begin{description}
+    \item[h] \textit{(here)} a primeira prioridade é colocar a imagem na ordem em que aparece no \texttt{.tex}.
+    \item[b] \textit{(bottom)} a segunda prioridade é colocar a imagem na parte inferior da página.
+    \item[t] \textit{(top)} a terceira prioridade é colocar a imagem na parte superior da página.
+    \item[!] \textit{(override)} força a substituição das preferências do \LaTeX\ pelas definidas.
+\end{description}
+
+Com o pacote \texttt{float}, é possível utilizar o parâmetro \texttt[H], para forçar a inserção da imagem exatamente na ordem em que aparece no \texttt{.tex}, dado que mesmo \texttt{[h!]} pode não surtir o mesmo efeito\footnote{Ainda assim, dê preferência a testar \texttt{[h!]} antes.}, caso seja entendido pelo programa que isso pode gerar problemas. Se ainda assim queira utilizar esse novo parâmetro, esteja ciente de eventuais erros com a construção do documento, incluindo um tempo necessário de compilação maior.
+
+Mais informações, incluindo a implementação modos de visualização mais complexos, como múltiplas imagens, podem ser encontradas em \href{https://www.overleaf.com/learn/latex/Inserting_Images}{Inserting Images (Overleaf)}.

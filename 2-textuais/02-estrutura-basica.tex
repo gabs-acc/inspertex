@@ -1,0 +1,80 @@
+\chapter{Estrutura básica de um documento}
+
+A estrutura de um documento em \LaTeX\ é composta por diferentes partes que organizam o conteúdo e garantem que a formatação seja aplicada corretamente. Neste capítulo, exploramos os principais elementos dessa estrutura, explicando sua função e como utilizá-los de forma eficiente.
+
+É mister garantir que o arquivo-alvo para formatação seja o correto. No nosso \textit{template} de exemplo, é o arquivo denominado como \texttt{main.tex}.
+
+\section{O preâmbulo do documento}
+O preâmbulo do seu documento será a parte destinada e definir a estrutura deste. Aqui não é descrito o texto como aparecerá na versão final da sua tese, mas serão definidas as normas de formatação, bem como parâmetros que podem ser utilizados no restante no texto.
+
+\subsection{Definição da classe}
+O parâmetro de classe no \LaTeX\ define as configurações gerais de formatação do seu documento. Note que estamos importando as configurações definidas no arquivo \texttt{insper-abntex2.cls}. A modificação ou exclusão desse arquivo te impossibilitará de trabalhar adequadamente com as normas definidas para o nosso \textit{layout}.
+
+A classe é definida na forma \texttt{\textbackslash documentclass[opções]\{classe\}}. A classe utilizada para nosso \textit{template} é o já definido \texttt{insper-abntex2}, e as opções modificam o comportamento da nossa classe. Além das opções já definidas explicitamente no \textit{template}, a maioria das opções para as classes \href{https://linorg.usp.br/CTAN/macros/latex/contrib/memoir/memman.pdf}{memoir} e \href{https://br.mirrors.cicku.me/ctan/macros/latex/contrib/abntex2/doc/abntex2.pdf}{abntex2} devem funcionar.
+
+\subsection{Importando Pacotes}
+Os pacotes adicionam recursos ao \LaTeX. Além dos pacotes importados como dependências da própria classe de documento definida no início do preâmbulo, é possível adicionar outros a depender da necessidade.
+
+No preâmbulo do presente documento, já foram importados pacotes de uso frequente. Eles poderão ser excluídos do preâmbulo caso não precisem ser utilizados. Sua forma é \texttt{\textbackslash usepackage[opções]\{pacote\}}. Pesquise a documentação dos pacotes caso queira modificar seu comportamento.
+
+\subsection{Informações sobre o seu documento}
+Após as definições de formatação e funcionalidades usadas no seu documento com \LaTeX, você deverá também escrever as informações principais do seu documento. Todas essas informações são utilizadas em elementos obrigatórios do documento, portanto se certifique de preencher todos os campos corretamente. Caso algum campo esteja vazio, o documento ainda poderá ser formatado sem erros, mas deixando de imprimir esses campos. Cabe ao usuário prestar a devida atenção ao preenchimento devido.
+
+\subsubsection{Observação sobre o nome do autor}
+Na ficha catalográfica (caso a impressão desta esteja habilitada), é impresso o nome do autor com destaque ao último nome. Por exemplo, se for definido \texttt{\textbackslash autor\{Thomas John Sargent\}}, será impressa a forma "Sargent, Thomas John".
+
+Caso mais de um nome deva ser destacado, indica-se separar esses últimos sobrenomes por "\texttt{\textbackslash\ }". A definição de \texttt{\textbackslash autor\{Robert Emerson Lucas Jr.\}} gera a forma "Jr., Robert Emerson Lucas". Em vez disso, defina \texttt{\textbackslash autor\{Robert Emerson Lucas\textbackslash\ Jr.\}}, para gerar a forma "Lucas Jr., Robert Emerson".
+
+Como alternativas a \texttt{\textbackslash autor}, também estão disponíveis as macros \texttt{\textbackslash autora} e \texttt{\textbackslash author}, com a mesma funcionalidade.
+
+\section{Ambiente \textit{document}}
+Definidas as opções iniciais, é hora de organizar a apresentação do documento em si. Essa parte é feita entre \texttt{\textbackslash begin\{document\}} e \texttt{\textbackslash end\{document\}}, que definem respecticamente o início e o fim do ambiente do documento.
+
+Para melhor organização do texto, dado que estamos tratando de documentos longos, é indicado que cada elemento seja definido em arquivo separado e chamado para seu arquivo principal.
+
+\subsection{Elementos pré-textuais}
+Os elementos importados com alguma macro que apresente prefixo \texttt{\textbackslash imprimir}\footnote{\texttt{\textbackslash imprimircapa}, \texttt{\textbackslash imprimirfolhaderosto}, etc.} dependem apenas das informações definidas no preâmbulo. Sua escolha será apenas a de escolher manter ou excluir/comentar esses elementos no seu texto, caso sejam opcionais.
+
+Os elementos que dependem de algum outro texto específico serão importados na forma \texttt{\textbackslash input\{arquivo\}}. Este comando apenas insere o conteúdo do arquivo selecionado no exato ponto onde é chamado.\footnote{Motivo pelo qual é essencial manter ao menos uma linha em branco entre \texttt{\textbackslash imprimirfolhaderosto} e \texttt{\textbackslash imprimirfichacatalografica}, para evitar erros de formatação.}
+
+O leitor atento já deve imaginar que o comando \texttt{\textbackslash input} também pode ser útil para organizar os textos dos capítulos do seu documento, de modo a tornar os arquivos \texttt{.tex} correspondentes menos inchados e facilitar a edição de elementos específicos destes. Isso poderá ser especialmente útil para inclusão de tabelas\footnote{Exemplo na seção \ref{sec:tabelas}.}, longas expressões matemáticas e outros elementos complexos.
+
+\subsection{Elementos textuais}
+Tão simples quanto poderia, aqui só será necessário importar para seu arquivo principal os arquivos referentes a cada um dos capítulos utilizados, em ordem de aparição no documento.
+
+Aqui, no entanto, é indicada a inserção desses elementos na forma \texttt{\textbackslash include\{arquivo\}}, que não apenas insere o conteúdo do arquivo, mas também realiza formatações como elementos próprios. Por isso mesmo, ao contrário de \texttt{\textbackslash input}, a macro \texttt{\textbackslash include} pode ser chamada apenas no ambiente \textit{document}.
+
+\section{Elementos pós-textuais}
+Aqui, o usuário já deve conhecer suficientemente o modo de organização de um \texttt{.tex} típico.
+
+O único adendo a ser feito aqui é o de que, na utilização de apêndices e anexos, é necessário manter manter os ambientes definidos para cada, nas formas:
+
+\begin{verbatim}
+\begin{apendicesenv}
+\partapendices
+    \input{nome-do-apendice-a}
+    \input{nome-do-apendice-b}
+    \input{nome-do-apendice-c}
+\end{apendicesenv}
+\end{verbatim}
+
+e
+
+\begin{verbatim}
+\begin{anexosenv}
+\partapendices
+    \input{nome-do-anexo-a}
+    \input{nome-do-anexo-b}
+    \input{nome-do-anexo-c}
+\end{apendicesenv}
+\end{verbatim}
+
+Deve ser alterada apenas a parte em que os arquivos são inseridos, com \texttt{\textbackslash input}.
+
+Para não imprimir esses elementos, algumas das opções do usuário são:
+
+\begin{itemize}
+    \item excluir os ambientes por completo (podendo escrever novamente mais tarde);
+    \item apenas comentar todas as linhas da forma usual, com \%;
+    \item deixar os ambientes entre \texttt{\textbackslash iffalse} e \texttt{\textbackslash fi}, fazendo o programa ignorar tudo o que estiver no meio.
+\end{itemize}
