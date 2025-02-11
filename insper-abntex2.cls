@@ -93,7 +93,7 @@
 
 % ====================================================================
 % Formatar nome de autor na forma 'Sobrenome, Nome'
-% (uso na ficha catalográfica
+% (uso na ficha catalográfica)
 % ====================================================================
 
 \protected\def\invnome#1{\xinvnome{}#1, \relax}
