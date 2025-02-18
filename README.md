@@ -8,7 +8,7 @@ Este repositório contém um template para a redação de documentos acadêmicos
 
 1. **Clone o Repositório**: Faça o clone deste repositório para o seu ambiente local.
     ```bash
-    git clone https://github.com/seu-usuario/inspertex.git
+    git clone https://github.com/gabs-acc/inspertex.git
     ```
 
 2. **Estrutura do Template**: O template está organizado da seguinte forma:
