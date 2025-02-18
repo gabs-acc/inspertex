@@ -11,6 +11,9 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.acn
+*.glo
+*.xdy
 
 # Backup files
 *~
