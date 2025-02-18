@@ -13,14 +13,39 @@ Este repositório contém um template para a redação de documentos acadêmicos
 
 2. **Estrutura do Template**: O template está organizado da seguinte forma:
     ```
-    inspertex/
-    ├── sections/
-    │   ├── introduction.md
-    │   ├── methodology.md
-    │   ├── results.md
-    │   └── conclusion.md
-    ├── references.bib
-    └── main.tex
+    inspertex
+    ├── 1-pre-textuais
+    │  ├── abstract.tex
+    │  ├── opcionais
+    │  │  ├── agradecimentos.tex
+    │  │  ├── dedicatoria.tex
+    │  │  ├── epigrafe.tex
+    │  │  ├── errata.tex
+    │  │  ├── lista-de-abreviaturas-e-siglas.tex
+    │  │  └── lista-de-simbolos.tex
+    │  └── resumo.tex
+    ├── 2-textuais
+    │  ├── 01-introducao.tex
+    │  ├── 02-estrutura-basica.tex
+    │  ├── 03-elementos-basicos.tex
+    │  ├── 04-citacoes.tex
+    │  ├── 05-teste-glossario.tex
+    │  ├── 06-conclusão.tex
+    ├── 3-pos-textuais
+    │  ├── anexos
+    │  │  ├── 01-anexo-a.tex
+    │  │  └── 02-anexo-b.tex
+    │  ├── apendices
+    │  │  ├── apendice-a.tex
+    │  │  └── apendice-b.tex
+    │  └── glossario.tex
+    ├── tabelas
+    │  └── tabela-exemplo.tex
+    ├── insper-abntex2.cls
+    ├── LICENSE
+    ├── main.tex
+    ├── README.md
+    ├── referencias.bib
     ```
 
 3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.md` nas seções correspondentes com o texto do seu trabalho acadêmico.
