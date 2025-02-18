@@ -48,7 +48,7 @@ Este repositório contém um template para a redação de documentos acadêmicos
     ├── referencias.bib
     ```
 
-3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.md` nas seções correspondentes com o texto do seu trabalho acadêmico.
+3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.tex` nas seções correspondentes com o texto do seu trabalho acadêmico.
 
 4. **Compilando o Documento**: Utilize um compilador XeTeX ou LuaLaTeX para gerar o documento final em PDF. Por exemplo, no terminal:
     ```bash
@@ -72,7 +72,7 @@ Este repositório contém um template para a redação de documentos acadêmicos
 
 2. **Estrutura do Template**: A estrutura do template será a mesma descrita acima.
 
-3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.md` nas seções correspondentes com o texto do seu trabalho acadêmico.
+3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.tex` nas seções correspondentes com o texto do seu trabalho acadêmico.
 
 4. **Compilando o Documento**: No Overleaf, selecione XeLaTeX ou LuaLaTeX como o compilador e clique em "Recompile" para gerar o PDF.
 
