@@ -64,7 +64,7 @@ Este repositório contém um template para a redação de documentos acadêmicos
     - **TeXstudio**: Abra o arquivo `main.tex` e selecione XeLaTeX ou LuaLaTeX como o compilador. Em seguida, compile o documento.
     - **Overleaf**: Veja a seção abaixo.
 
-6. **Referências**: Adicione suas referências no arquivo `references.bib` no formato BibTeX.
+6. **Referências**: Adicione suas referências no arquivo `referencias.bib` no formato BibTeX.
 
 ### Uso no Overleaf
 
