@@ -1,4 +1,4 @@
-# Template de Documentos Acadêmicos
+# Template Insper de Trabalho Acadêmico
 
 Este repositório contém um template para a redação de documentos acadêmicos. O objetivo é fornecer uma estrutura básica que facilite a organização e formatação de trabalhos acadêmicos.
 
@@ -31,10 +31,10 @@ Este repositório contém um template para a redação de documentos acadêmicos
 1. **Trabalhando com o Overleaf** (indicado para iniciantes)
     - **Overleaf**: Acesse o template diretamente [neste link](https://www.overleaf.com/read/hjxwfjwcmnrn). Será necessário copiar o projeto para poder editá-lo para os fins pretendidos (no canto superior esquerdo, acesse Menu -> Copy Project). Ainda na aba Menu, selecione XeLaTeX ou LuaLaTeX como compilador.
     - **Overleaf + VS Code**: É possível integrar os dois ambientes com a extensão [Overleaf Workshop](https://marketplace.visualstudio.com/items?itemName=iamhyc.overleaf-workshop). Assim, será possível acessar diretamente seu documento armazenado no Overleaf ainda se valendo das comodidades dos VS Code.
-    - **Overleaf + Outros**: Para aquele que quiser sincronizar o Overleaf com algum editor local, o projeto [Overleaf-Sync](https://github.com/moritzgloeckl/overleaf-sync) pode ser um facilitator.
+    - **Overleaf + Outros**: Para aquele que quiser sincronizar o Overleaf com algum outro editor local, o projeto [Overleaf-Sync](https://github.com/moritzgloeckl/overleaf-sync) pode ser um facilitador.
 2. **Vantagens de usar o Overleaf**
-    - **Interface Amigável**: A interface do Overleaf é simples e intuitivo, adequado para quem não quer gastar horas configurando o ambiente para ter uma experiência confortável.
-    - **Sem Instalações**: Além de não precisar instalar um editor, sendo acessível pelo navegador, o Overleaf suporta por padrão [milhares de pacotes](https://www.overleaf.com/blog/tex-live-2022-now-available) sem necessidade de instalação adicional. Ainda, não será necessário se preocupar com fontes (Arial e Times New Roman, no nosso caso) ou configurações específicas de compilação.
+    - **Interface Amigável**: A interface do Overleaf é simples e intuitiva, adequada para quem não quer gastar horas configurando o ambiente para ter uma experiência razoável.
+    - **Sem Instalações**: Além de não precisar instalar um editor, sendo acessível pelo navegador, o Overleaf suporta por padrão [mais de 5.000 pacotes](https://www.overleaf.com/learn/latex/Overleaf_and_TeX_Live) sem necessidade de instalação adicional. Ainda, não será necessário se preocupar com fontes (Arial e Times New Roman, no nosso caso) ou configurações específicas de compilação.
     - **Fácil Integração com Outras IDEs**: Mesmo no plano grátis, é possível trabalhar sincronamente com o Overleaf e seu editor local de preferência (ver seção anterior).
     - **Rich Text**: O usuário tem a opção de usar um editor na forma [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG). Útil para editar tabelas e outros elementos visuais do seu texto.
 
