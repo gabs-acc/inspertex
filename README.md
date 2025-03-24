@@ -23,11 +23,20 @@ Este repositório contém um template para a redação de documentos acadêmicos
     ```
 
 4. **Usando IDEs**: 
-    - **VS Code**: Instale a extensão LaTeX Workshop. Abra o arquivo `main.tex` e utilize os comandos da extensão para compilar o documento.
-    - **TeXstudio**: Abra o arquivo `main.tex` e selecione XeLaTeX ou LuaLaTeX como o compilador. Em seguida, compile o documento.
-    - **Overleaf**: Acesse o template diretamente [neste link](https://www.overleaf.com/read/hjxwfjwcmnrn). Selecione XeLaTeX ou LuaLaTeX como o compilador na aba Menu.
+    - **VS Code**: Instale a extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop). Abra o arquivo `main.tex` e utilize os comandos da extensão para compilar o documento.
+    - **TeXstudio**: Abra o arquivo `main.tex` e selecione XeLaTeX ou LuaLaTeX como o compilador. Em seguida, compile o documento. Como um editor projetado especificamente para trabalhar com LaTeX, o TeXstudio é uma ferramenta fácil e intuitiva, mas não tão poderosa quanto outros IDEs.
 
-5. **Referências**: Adicione suas referências no arquivo `referencias.bib` no formato BibTeX.
+### Uso Online
+
+1. **Trabalhando com o Overleaf** (indicado para iniciantes)
+    - **Overleaf**: Acesse o template diretamente [neste link](https://www.overleaf.com/read/hjxwfjwcmnrn). Será necessário copiar o projeto para poder editá-lo para os fins pretendidos (no canto superior esquerdo, acesse Menu -> Copy Project). Ainda na aba Menu, selecione XeLaTeX ou LuaLaTeX como compilador.
+    - **Overleaf + VS Code**: É possível integrar os dois ambientes com a extensão [Overleaf Workshop](https://marketplace.visualstudio.com/items?itemName=iamhyc.overleaf-workshop). Assim, será possível acessar diretamente seu documento armazenado no Overleaf ainda se valendo das comodidades dos VS Code.
+    - **Overleaf + Outros**: Para aquele que quiser sincronizar o Overleaf com algum editor local, o projeto [Overleaf-Sync](https://github.com/moritzgloeckl/overleaf-sync) pode ser um facilitator.
+2. **Vantagens de usar o Overleaf**
+    - **Interface Amigável**: A interface do Overleaf é simples e intuitivo, adequado para quem não quer gastar horas configurando o ambiente para ter uma experiência confortável.
+    - **Sem Instalações**: Além de não precisar instalar um editor, sendo acessível pelo navegador, o Overleaf suporta por padrão [milhares de pacotes](https://www.overleaf.com/blog/tex-live-2022-now-available) sem necessidade de instalação adicional. Ainda, não será necessário se preocupar com fontes (Arial e Times New Roman, no nosso caso) ou configurações específicas de compilação.
+    - **Fácil Integração com Outras IDEs**: Mesmo no plano grátis, é possível trabalhar sincronamente com o Overleaf e seu editor local de preferência (ver seção anterior).
+    - **Rich Text**: O usuário tem a opção de usar um editor na forma [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG). Útil para editar tabelas e outros elementos visuais do seu texto.
 
 ## Dicas
 
