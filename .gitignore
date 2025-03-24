@@ -18,7 +18,7 @@
 *.bcf
 *.ilg
 *.ind
-*synctex.xml
+*.synctex.xml
 
 # Backup files
 *~
