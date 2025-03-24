@@ -21,34 +21,20 @@ A fórmula \ref{eqn:newton} é um exemplo de equação numerada.
 \label{eqn:newton}
 \end{equation}
 
-A seguir, a demonstração do teorema de Bayes (equação \ref{eqn:bayes}).
+A seguir, a demonstração do teorema de Bayes.
 
-\begin{align}
+\begin{align*}
     P(A|B) &= \frac{P(A \cap B)}{P(B)}\\
     &= \frac{P(A \cap B)}{P(B)} \cdot \frac{P(A)}{P(A)}\\
     &= \frac{P(A \cap B)}{P(A)} \cdot \frac{P(A)}{P(B)}\\
     &= \frac{P(B|A) \cdot P(A)}{P(B)}\label{eqn:bayes}
-\end{align}
+\end{align*}
 
 Mais informações relevantes em \href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{Mathematical expressions (Overleaf)}.
 
 Para construir as fórmulas em formato compatível com \LaTeX, pode ser útil a ferramenta \href{https://editor.codecogs.com/}{CodeCogs}.
 
 Para descobrir os comandos para os símbolos que precisar utilizar, basta desenhar o símbolo em \href{https://detexify.kirelabs.org/classify.html}{Detexify}, que te retornará o comando e pacote requerido (importar pacote no preâmbulo do \texttt{main.tex} caso não esteja importado).
-
-\section{Citações}
-
-\subsection{Citação direta curta}
-
-A citação no fluxo do texto é feita com o comando \texttt{\textbackslash textcite} e a citação isolada é feita com o comando \texttt{\textbackslash cite}.
-
-Exemplo no texto (com \texttt{\textbackslash textcite}):
-
-Conforme \textcite[8]{churchill2012marketing}, “embora a orientação para a produção seja muito criticada por vários profissionais de marketing, há situações em que ela é apropriada.”
-
-Exemplo no texto (com \texttt{\textbackslash cite}):
-
-“Embora a orientação para a produção seja muito criticada por vários profissionais de marketing, há situações em que ela é apropriada.” \cite[8]{churchill2012marketing}
 
 \section{Imagens}
 A figura \ref{fig:telles} apresenta um exemplo simples de como importar uma imagem.
@@ -74,3 +60,20 @@ No nosso exemplo, usamos a opção \texttt{[hbt!]}, que define:
 Com o pacote \texttt{float}, é possível utilizar o parâmetro \texttt[H], para forçar a inserção da imagem exatamente na ordem em que aparece no \texttt{.tex}, dado que mesmo \texttt{[h!]} pode não surtir o mesmo efeito\footnote{Ainda assim, dê preferência a testar \texttt{[h!]} antes.}, caso seja entendido pelo programa que isso pode gerar problemas. Se ainda assim o usuário quiser utilizar esse novo parâmetro, esteja ciente de eventuais erros com a construção do documento, incluindo um tempo necessário de compilação maior.
 
 Mais informações, incluindo a implementação modos de visualização mais complexos, como múltiplas imagens, podem ser encontradas em \href{https://www.overleaf.com/learn/latex/Inserting_Images}{Inserting Images (Overleaf)}.
+
+\section{Glossário e índice}
+Para fins didáticos, esta será a única seção em que as opções de glossário e índice serão usadas.
+
+Os exemplos aqui são para que o usuário tenha uma aplicação e possa ver como esses elementos são organizados no documento final.
+
+As entradas de glossário são definidas no aqui \texttt{3-pos-textuais\textbackslash glossario.tex} e exemplos simples de aplicação são na forma "\gls{latex} e \gls{html}".\footnote{Referir-se ao \texttt{.tex}.} Mais informações em Mais informações relevantes em \href{https://www.overleaf.com/learn/latex/Glossaries}{Glossaries (Overleaf)}.
+
+Referência sobre índices é encontrada em \href{https://www.overleaf.com/learn/latex/Indices}{Indices (Overleaf)}, que também fornece o exemplo:
+
+\begin{citacao}
+In this example, several keywords\index{keywords} will be used 
+which are important and deserve to appear in the Index\index{Index}.
+
+Terms like generate\index{generate} and some\index{others} will also 
+show up. Terms in the index can also be nested\index{Index!nested}.
+\end{citacao}
