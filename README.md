@@ -25,7 +25,7 @@ Este repositório contém um template para a redação de documentos acadêmicos
 4. **Usando IDEs**: 
     - **VS Code**: Instale a extensão LaTeX Workshop. Abra o arquivo `main.tex` e utilize os comandos da extensão para compilar o documento.
     - **TeXstudio**: Abra o arquivo `main.tex` e selecione XeLaTeX ou LuaLaTeX como o compilador. Em seguida, compile o documento.
-    - **Overleaf**: Acesse o template diretamente [neste link](https://www.overleaf.com/read/hjxwfjwcmnrn#2a00fa).
+    - **Overleaf**: Acesse o template diretamente [neste link](https://www.overleaf.com/read/hjxwfjwcmnrn#). Selecione XeLaTeX ou LuaLaTeX como o compilador na aba Menu.
 
 5. **Referências**: Adicione suas referências no arquivo `referencias.bib` no formato BibTeX.
 
