@@ -15,6 +15,10 @@
 *.glo
 *.xdy
 *.idx
+*.bcf
+*.ilg
+*.ind
+*.xml
 
 # Backup files
 *~
