@@ -46,7 +46,7 @@
 \usepackage{imakeidx} % criação de índices
 \makeindex % compilar índice
 \usepackage[
-    acronym, % configurações específicas para acrônimos
+    %acronym, % configurações específicas para acrônimos
     xindy={language=portuguese}, % para o índice remissivo
     subentrycounter, % contagem de subentradas no glossário
     seeautonumberlist, % ver também números automáticos na lista
@@ -78,6 +78,7 @@
 \usepackage{amsfonts} % fontes adicionais
 \usepackage{amsthm} % teoremas (criação e personalização)
 \usepackage{mathtools} % extensão de amsmath
+\usepackage{physics} % notação matemática simplificada
 
 \usepackage{
     lipsum
@@ -162,71 +163,68 @@
 % Início do documento
 % ----
 \begin{document}
-    % Retira espaço extra obsoleto entre as frases
-    \frenchspacing
+% Retira espaço extra obsoleto entre as frases
+\frenchspacing
 
-    % Elementos pré-textuais
-    \pretextual
-    % Capa (obrigatório)
-    \imprimircapa
-    % Folha de rosto (obrigatório)
-    \imprimirfolhaderosto
+% Elementos pré-textuais
+\pretextual
+% Capa (obrigatório)
+\imprimircapa
+% Folha de rosto (obrigatório)
+\imprimirfolhaderosto
 
-    % Ficha catalográfica (opcional)
-    \imprimirfichacatalografica
-    % Errata (opcional)
-    \input{1-pre-textuais/opcionais/errata}
-    % Folha de aprovação (obrigatório)
-    \imprimirfolhadeaprovacao
-    % Dedicatória (opcional)
-    \input{1-pre-textuais/opcionais/dedicatoria}
-    % Agradecimentos (opcional)
-    \input{1-pre-textuais/opcionais/agradecimentos}
-    % Epígrafe (opcional)
-    \input{1-pre-textuais/opcionais/epigrafe}
-    % Resumo (obrigatório)
-    \input{1-pre-textuais/resumo}
-    % Abstract - Resumo em língua estrangeira (obrigatório)
-    \input{1-pre-textuais/abstract}
-    % Lista de ilustrações (opcional)
-    \imprimirlistadeilustracoes
-    % Lista de tabelas (opcional)
-    \imprimirlistadetabelas
-    % Lista de abreviaturas e siglas (opcional)
-    \input{1-pre-textuais/opcionais/lista-de-abreviaturas-e-siglas}
-    % Lista de símbolos (opcional)
-    \input{1-pre-textuais/opcionais/lista-de-simbolos}
-    % Sumário (obrigatório)
-    \imprimirsumario
+% Ficha catalográfica (opcional)
+\imprimirfichacatalografica
+% Errata (opcional)
+\input{1-pre-textuais/opcionais/errata}
+% Folha de aprovação (obrigatório)
+\imprimirfolhadeaprovacao
+% Dedicatória (opcional)
+\input{1-pre-textuais/opcionais/dedicatoria}
+% Agradecimentos (opcional)
+\input{1-pre-textuais/opcionais/agradecimentos}
+% Epígrafe (opcional)
+\input{1-pre-textuais/opcionais/epigrafe}
+% Resumo (obrigatório)
+\input{1-pre-textuais/resumo}
+% Abstract - Resumo em língua estrangeira (obrigatório)
+\input{1-pre-textuais/abstract}
+% Lista de ilustrações (opcional)
+\imprimirlistadeilustracoes
+% Lista de tabelas (opcional)
+\imprimirlistadetabelas
+% Lista de abreviaturas e siglas (opcional)
+\input{1-pre-textuais/opcionais/lista-de-abreviaturas-e-siglas}
+% Lista de símbolos (opcional)
+\input{1-pre-textuais/opcionais/lista-de-simbolos}
+% Sumário (obrigatório)
+\imprimirsumario
 
-    % Elementos textuais
-    \textual
-    % Capítulos do texto (incluir conforme necessidade)
-    \include{2-textuais/01-introducao}
-    \include{2-textuais/02-estrutura-basica}
-    \include{2-textuais/03-elementos-basicos}
-    \include{2-textuais/04-citacoes}
-    \include{2-textuais/05-teste-glossario}
-    \include{2-textuais/06-conclusão}
+% Elementos textuais
+\textual
+% Capítulos do texto (incluir conforme necessidade)
+\include{2-textuais/01-introducao}
+\include{2-textuais/02-estrutura-basica}
+\include{2-textuais/03-elementos-basicos}
+\include{2-textuais/04-citacoes}
+\include{2-textuais/05-conclusão}
 
-    % Elementos pós-textuais
-    \postextual
-    % Bibliografia (obrigatório)
-    \printbibliography[title=REFER\^ENCIAS]
-    % Glossário (opcional)
-    \imprimirglossario
-    % Apêndices (opcional)
-    \begin{apendicesenv}
-        \partapendices
-        \input{3-pos-textuais/apendices/apendice-a}
-        \input{3-pos-textuais/apendices/apendice-b}
-    \end{apendicesenv}
-    % Anexos (opcional)
-    \begin{anexosenv}
-        \partanexos
-        \input{3-pos-textuais/anexos/01-anexo-a}
-        \input{3-pos-textuais/anexos/02-anexo-b}
-    \end{anexosenv}
-    % Índice remissivo (opcional)
-    \imprimirindice
+% Elementos pós-textuais
+\postextual
+% Bibliografia (obrigatório)
+\printbibliography[title=REFER\^ENCIAS]
+% Glossário (opcional)
+\imprimirglossario
+% Apêndices (opcional)
+\begin{apendicesenv}
+    \partapendices
+    \input{3-pos-textuais/apendices/apendice-a}
+\end{apendicesenv}
+% Anexos (opcional)
+\begin{anexosenv}
+    \partanexos
+    \input{3-pos-textuais/anexos/anexo-a}
+\end{anexosenv}
+% Índice remissivo (opcional)
+\imprimirindice
 \end{document}
