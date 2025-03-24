@@ -11,46 +11,9 @@ Este repositório contém um template para a redação de documentos acadêmicos
     git clone https://github.com/gabs-acc/inspertex.git
     ```
 
-2. **Estrutura do Template**: O template está organizado da seguinte forma:
-    ```
-    inspertex
-    ├── 1-pre-textuais
-    │  ├── abstract.tex
-    │  ├── opcionais
-    │  │  ├── agradecimentos.tex
-    │  │  ├── dedicatoria.tex
-    │  │  ├── epigrafe.tex
-    │  │  ├── errata.tex
-    │  │  ├── lista-de-abreviaturas-e-siglas.tex
-    │  │  └── lista-de-simbolos.tex
-    │  └── resumo.tex
-    ├── 2-textuais
-    │  ├── 01-introducao.tex
-    │  ├── 02-estrutura-basica.tex
-    │  ├── 03-elementos-basicos.tex
-    │  ├── 04-citacoes.tex
-    │  ├── 05-teste-glossario.tex
-    │  ├── 06-conclusão.tex
-    ├── 3-pos-textuais
-    │  ├── anexos
-    │  │  ├── 01-anexo-a.tex
-    │  │  └── 02-anexo-b.tex
-    │  ├── apendices
-    │  │  ├── apendice-a.tex
-    │  │  └── apendice-b.tex
-    │  └── glossario.tex
-    ├── tabelas
-    │  └── tabela-exemplo.tex
-    ├── insper-abntex2.cls
-    ├── LICENSE
-    ├── main.tex
-    ├── README.md
-    ├── referencias.bib
-    ```
+2. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.tex` nas seções correspondentes com o texto do seu trabalho acadêmico.
 
-3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.tex` nas seções correspondentes com o texto do seu trabalho acadêmico.
-
-4. **Compilando o Documento**: Utilize um compilador XeTeX ou LuaLaTeX para gerar o documento final em PDF. Por exemplo, no terminal:
+3. **Compilando o Documento**: Utilize um compilador XeTeX ou LuaLaTeX para gerar o documento final em PDF. Por exemplo, no terminal:
     ```bash
     xelatex main.tex
     ```
@@ -59,24 +22,12 @@ Este repositório contém um template para a redação de documentos acadêmicos
     lualatex main.tex
     ```
 
-5. **Usando IDEs**: 
+4. **Usando IDEs**: 
     - **VS Code**: Instale a extensão LaTeX Workshop. Abra o arquivo `main.tex` e utilize os comandos da extensão para compilar o documento.
     - **TeXstudio**: Abra o arquivo `main.tex` e selecione XeLaTeX ou LuaLaTeX como o compilador. Em seguida, compile o documento.
-    - **Overleaf**: Veja a seção abaixo.
+    - **Overleaf**: Acesse o template diretamente [neste link](https://www.overleaf.com/read/hjxwfjwcmnrn#2a00fa).
 
-6. **Referências**: Adicione suas referências no arquivo `referencias.bib` no formato BibTeX.
-
-### Uso no Overleaf
-
-1. **Importar Projeto**: Faça o upload dos arquivos do repositório para um novo projeto no Overleaf.
-
-2. **Estrutura do Template**: A estrutura do template será a mesma descrita acima.
-
-3. **Editando o Conteúdo**: Substitua o conteúdo dos arquivos `.tex` nas seções correspondentes com o texto do seu trabalho acadêmico.
-
-4. **Compilando o Documento**: No Overleaf, selecione XeLaTeX ou LuaLaTeX como o compilador e clique em "Recompile" para gerar o PDF.
-
-5. **Referências**: Adicione suas referências no arquivo `references.bib` no formato BibTeX.
+5. **Referências**: Adicione suas referências no arquivo `referencias.bib` no formato BibTeX.
 
 ## Dicas
 
