@@ -40,7 +40,7 @@
 % ====================================================================
 
 % alias para autor(a)
-\let\autora\autor
+\NewCommandCopy\autora\autor
 
 % armazena e imprime o subtítulo
 \providecommand{\imprimirsubtitulo}{}
