@@ -47,7 +47,19 @@
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
 % imprime o subtítulo junto ao título
-\renewcommand{\imprimirtitulo}{\thetitle: \imprimirsubtitulo}
+\renewcommand{\imprimirtitulo}{%
+  \ifx\imprimirsubtitulo\@empty
+    \thetitle
+  \else
+    \ifx\imprimirsubtitulo\relax
+      \thetitle
+    \else
+      \thetitle: \imprimirsubtitulo
+    \fi
+  \fi
+}
+
+\renewcommand{\imprimirtitulo}{\thetitle\imprimirsubtitulo}
 
 % armazena e imprime o curso
 \providecommand{\imprimircurso}{}
