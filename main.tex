@@ -4,9 +4,9 @@
 % - É este o arquivo que o LaTeX buscará compilar primeiro para gerar o documento final.
 % - O conteúdo aqui organizado definirá a estrutura geral do seu trabalho.
 % - As opções do documento (nome de autores, informações sobre o texto, etc.),
-%   serão definidas aqui
+%   serão definidas aqui.
 % - É aqui que você escolherá quais elementos textuais incluir ou omitir da versão
-%   final do documento
+%   final do documento.
 %
 % IMPORTANTE: não remover linhas com comandos essenciais, como 'begin{document}' e
 %             'end{document}' e apenas alterar as definições do documento anteriores
@@ -58,7 +58,7 @@
 
 \usepackage{
     fontspec
-} % uso de fontes TrueType (requer motor de compilação XeTeX ou LuaTeX)
+} % uso de fontes TrueType (requer motor de compilação XeLaTeX ou LuaLaTeX)
 
 % Para bibliografia
 \usepackage{csquotes} % gerenciamento de citações
@@ -79,7 +79,7 @@
 \usepackage{amsfonts} % fontes adicionais
 \usepackage{amsthm} % teoremas (criação e personalização)
 \usepackage{mathtools} % extensão de amsmath
-\usepackage{physics} % notação matemática simplificada
+\usepackage{physics} % aliases notação matemática simplificada
 
 \usepackage{
     lipsum
@@ -127,8 +127,9 @@
 \setmainfont{Arial}
 %\setmainfont{Times New Roman}
 
-% Fontes bibliográficas
+% Fontes bibliográficas (permitido utilizar múltiplas fontes)
 \addbibresource{referencias.bib}
+%\addbibresource{outras-referencias.bib}
 
 % Título
 \titulo{Título do trabalho}
@@ -150,11 +151,11 @@
 \coorientador[Coorientador:]{Nome do Seu Coorientador}
 % Tipo de trabalho (TCC  / Dissertação / Tese)
 \tipotrabalho{Tipo de trabalho}
-% Palavras-chaves (importante: separar por vírgulas)
+% Palavras-chaves (importante: separar com vírgulas)
 \palavraschaves{abnt, LaTeX, formatação, equações, microeconomia}
-% Palavras-chaves em inglês (importante: separar por vírgulas)
+% Palavras-chaves em inglês (importante: separar com vírgulas)
 \keywords{abnt, LaTeX, formatting, equations, microeconomics}
-% Professores convidados (importante: separar por vírgulas)
+% Professores convidados (importante: separar com vírgulas)
 \professores{Adam Smith, John Maynard Keynes, Robert Lucas Jr.}
 
 % Preâmbulo
